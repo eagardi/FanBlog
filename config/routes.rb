@@ -17,7 +17,10 @@ Rails.application.routes.draw do
   get 'posts/index' => 'posts#index', as: :posts_main
   
   get 'about/index' => 'about#index', as: :about_main
-
+  
+  post 'posts/create' => 'posts#create', as: :posts_create
+  
+  
   #resources :about
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
