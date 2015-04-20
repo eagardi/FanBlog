@@ -1,20 +1,19 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <ul class="nav navbar-nav">
+  <ul class="nav nav-tabs">
     <li>
-      <%=link_to "FanTBlog", root_path, id: "logo" %>
+      <%=link_to "Home", root_path, id: "logo" %>
     </li>
     <li>
       <%=link_to "About", about_main_path %>
     </li>
-    <li>
-      <%=link_to "Contact", "#" %>
-    </li>
+    
     <li>
       <%=link_to "Posts", posts_main_path%>
     </li>
-  </ul>
+    <li>
+      <%=link_to "Login", new_session_path%>
+    </li>
 
-  <ul class="nav navbar-nav navbar-left">
 
     <% if current_user %>
       <li>

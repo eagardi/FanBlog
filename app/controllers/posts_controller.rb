@@ -11,7 +11,8 @@ class PostsController < ApplicationController
   end
    def create
      
-     render text:  params[:post_id] 
-     
-   end
+     #render text:  params[:post_id] 
+    Post.find_by(params[:post_id]).comments.create(body: params[:comment], post_id: params[:post_id])
+    redirect_to posts_main_path
+end
 end

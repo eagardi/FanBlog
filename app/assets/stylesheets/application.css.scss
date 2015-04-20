@@ -17,7 +17,7 @@
 @import "bootstrap";
 
 .jumbotron {
-  background-image: url('website.jpg'); 
+  background-image: url('baseball.jpg'); 
   //background-color: #000; 
   height: 1000px;
   background-repeat: no-repeat;
@@ -37,10 +37,29 @@
 }
 .other
 {
-   border: 2px solid #a1a1a1;
+   
     border-radius: 25px; 
     background-color: #FFF;
+    color: #2C3E58;
+      opacity: 0.4;
     
+}
+.container
+{
+      position: fixed;
+    width: 340px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -170px;
+	background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    border: 1px solid #c7d0d2;
+    border-radius: 2px;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
 }
 
 body{
@@ -48,8 +67,72 @@ body{
 
 }
 
-.nav navbar-nav
+.nav, nav nav-tabs, navbar navbar-default navbar-fixed-bottom
 {
- color: #FFF; 
+     background-color: #2C3E58;
+      border-color: #2C3E58;
+      color: #FFF; 
+     
+}
 
+.navbar .nav > li > a {
+ 
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
+
+}
+.btn, btn-primary
+{
+    background-color: #FFF;
+    color: #2C3E58;
+}
+.centered {
+    margin: 0 auto;
+    text-align: left;
+    width: 800px;
+
+}
+.nav, navbar-nav
+{
+    background-color: #2C3E58;
+      border-color: #2C3E58;
+      color: #FFF;
+}
+.navbar, navbar-default, navbar-fixed-bottom
+{
+     background-color: #2C3E58;
+      border-color: #2C3E58;
+      color: #FFF;
+}
+.nav, nav-tabs
+{
+    color: #FFF;
+}
+.daily
+{
+    background-image: url('Daily Fantasy Picks.PNG');
+    height: 300px;
+    width: 545px;
+    color: #FF0000;
+    opacity: 0.5;
+    position: absolute;
+    right: 0px;
+    
+     
+}
+.fanduel
+{
+    background-image: url('fanduel.jpg');
+    height: 300px;
+    width: 545px;
+    color: #FF0000;
+    opacity: 0.5;
+}
+.title
+{
+   
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
 }
