@@ -1,19 +1,38 @@
 <div align="center">
 <h1>Join the Talk</h1>
 
-<% @posts.each do |post| %>
-<h1><%=post.title%></h1>
+  
+<%= form_tag posts_create_path do %>
+<%= label_tag :title, "Title"  %>  </br>
 
-<p> <%= post.comment %></p>
-<% post.comments.each do |comment| %>
- 
-<p> <%= comment.body %></p>
+ <div class="panel-heading">
+      <h3 class="panel-title">Panel title</h3>
+   </div>
+ <%= text_field_tag("title") %></br>
+<%= label_tag :comment, "Comment"  %>  </br> 
+<div class="panel-body">
+     
+   
+<%= text_area_tag("comment", "" , size: "24x6") %>
+</div>
+<br/>
+<%= submit_tag "Comment" %>
 
 <% end %>
-<%= form_tag posts_create_path do %>
+<% @posts.each do |post| %>
+<div class="panel panel-default">
+<h1><%=post.title%></h1>
+</div>
+<p> <%= post.comment %></p>
+<% post.comments.each do |comment| %>
+ <div class="panel-footer">
+<p> <%= comment.body %></p>
+</div>
+<% end %>
+<%= form_tag comments_create_path do %>
 <%=hidden_field_tag 'post_id', post.id%>
 <%= label_tag :comment, "Comment"  %>  </br>   
-<%= text_area_tag("comment", "" , size: "24x6") %>
+<%= text_area_tag("body", "" , size: "24x6") %>
 <br/>
 <%= submit_tag "Comment" %>
 

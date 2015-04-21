@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   
   post 'posts/create' => 'posts#create', as: :posts_create
   
+  post 'comments/create' => 'comments#create', as: :comments_create
   
   #resources :about
   # The priority is based upon order of creation: first created -> highest priority.

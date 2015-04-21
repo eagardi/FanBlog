@@ -10,9 +10,10 @@ class PostsController < ApplicationController
     
   end
    def create
+     Post.create(title: params[:title], comment: params[:comment], user_id: params[:user_id])
      
      #render text:  params[:post_id] 
-    Post.find_by(params[:post_id]).comments.create(body: params[:comment], post_id: params[:post_id])
+    #Post.find_by(params[:user_id]).comments.create(body: params[:comment] )
     redirect_to posts_main_path
 end
 end
