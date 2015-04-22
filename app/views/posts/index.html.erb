@@ -1,4 +1,6 @@
+
 <div align="center">
+ <div class="hide">
 <h1>Join the Talk</h1>
 
   
@@ -19,11 +21,13 @@
 <%= submit_tag "Comment" %>
 
 <% end %>
+</div>
+<button onclick="toggle_div_function(hide)">Click me</button>
 <% @posts.each do |post| %>
 <div class="panel panel-default">
 <h1><%=post.title%></h1>
 </div>
-<p> <%= post.comment %></p>
+<p> <%= post.comment %>
 <% post.comments.each do |comment| %>
  <div class="panel-footer">
 <p> <%= comment.body %></p>
